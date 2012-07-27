@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42441A9B15861785009863BE /* libboost_iostreams.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441A9615861785009863BE /* libboost_iostreams.dylib */; };
+		42441A9C15861785009863BE /* libboost_program_options.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441A9715861785009863BE /* libboost_program_options.dylib */; };
+		42441A9D15861785009863BE /* libboost_regex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441A9815861785009863BE /* libboost_regex.dylib */; };
+		42441A9E15861785009863BE /* libboost_serialization.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441A9915861785009863BE /* libboost_serialization.dylib */; };
+		42441A9F15861785009863BE /* libboost_signals.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441A9A15861785009863BE /* libboost_signals.dylib */; };
+		42441AA2158617D9009863BE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42441A82158616AF009863BE /* main.cpp */; };
+		42441B2915862C44009863BE /* libea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42441B2815862C44009863BE /* libea.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42441A8915861724009863BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		42441A7E158616AF009863BE /* self-assembly.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "self-assembly.xcconfig"; sourceTree = "<group>"; };
+		42441A7F158616AF009863BE /* libea_defaults.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = libea_defaults.cfg; sourceTree = "<group>"; };
+		42441A80158616AF009863BE /* Jamroot */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jamroot; sourceTree = "<group>"; };
+		42441A82158616AF009863BE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		42441A8B15861724009863BE /* ealife */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ealife; sourceTree = BUILT_PRODUCTS_DIR; };
+		42441A9615861785009863BE /* libboost_iostreams.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_iostreams.dylib; path = /usr/local/lib/libboost_iostreams.dylib; sourceTree = "<absolute>"; };
+		42441A9715861785009863BE /* libboost_program_options.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_program_options.dylib; path = /usr/local/lib/libboost_program_options.dylib; sourceTree = "<absolute>"; };
+		42441A9815861785009863BE /* libboost_regex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_regex.dylib; path = /usr/local/lib/libboost_regex.dylib; sourceTree = "<absolute>"; };
+		42441A9915861785009863BE /* libboost_serialization.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_serialization.dylib; path = /usr/local/lib/libboost_serialization.dylib; sourceTree = "<absolute>"; };
+		42441A9A15861785009863BE /* libboost_signals.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_signals.dylib; path = /usr/local/lib/libboost_signals.dylib; sourceTree = "<absolute>"; };
+		42441B2815862C44009863BE /* libea.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libea.a; path = ../../../DerivedData/research/Build/Products/Debug/libea.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42441A8815861724009863BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42441B2915862C44009863BE /* libea.a in Frameworks */,
+				42441A9B15861785009863BE /* libboost_iostreams.dylib in Frameworks */,
+				42441A9C15861785009863BE /* libboost_program_options.dylib in Frameworks */,
+				42441A9D15861785009863BE /* libboost_regex.dylib in Frameworks */,
+				42441A9E15861785009863BE /* libboost_serialization.dylib in Frameworks */,
+				42441A9F15861785009863BE /* libboost_signals.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		424419E815861127009863BE = {
+			isa = PBXGroup;
+			children = (
+				42441A80158616AF009863BE /* Jamroot */,
+				42441A7D158616AF009863BE /* etc */,
+				42441A9515861785009863BE /* lib */,
+				42441A81158616AF009863BE /* src */,
+				424419F415861127009863BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		424419F415861127009863BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42441A8B15861724009863BE /* ealife */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42441A7D158616AF009863BE /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				42441A7E158616AF009863BE /* self-assembly.xcconfig */,
+				42441A7F158616AF009863BE /* libea_defaults.cfg */,
+			);
+			path = etc;
+			sourceTree = "<group>";
+		};
+		42441A81158616AF009863BE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				42441A82158616AF009863BE /* main.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		42441A9515861785009863BE /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				42441B2815862C44009863BE /* libea.a */,
+				42441A9615861785009863BE /* libboost_iostreams.dylib */,
+				42441A9715861785009863BE /* libboost_program_options.dylib */,
+				42441A9815861785009863BE /* libboost_regex.dylib */,
+				42441A9915861785009863BE /* libboost_serialization.dylib */,
+				42441A9A15861785009863BE /* libboost_signals.dylib */,
+			);
+			name = lib;
+			path = /Users/dk/Documents/repositories/research.hg/src/ocr/../apps;
+			sourceTree = "<absolute>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42441A8A15861724009863BE /* self-assembly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42441A9215861725009863BE /* Build configuration list for PBXNativeTarget "self-assembly" */;
+			buildPhases = (
+				42441A8715861724009863BE /* Sources */,
+				42441A8815861724009863BE /* Frameworks */,
+				42441A8915861724009863BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "self-assembly";
+			productName = ealife;
+			productReference = 42441A8B15861724009863BE /* ealife */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		424419EA15861127009863BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Michigan State University";
+			};
+			buildConfigurationList = 424419ED15861127009863BE /* Build configuration list for PBXProject "self-assembly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 424419E815861127009863BE;
+			productRefGroup = 424419F415861127009863BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42441A8A15861724009863BE /* self-assembly */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42441A8715861724009863BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42441AA2158617D9009863BE /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		424419FB15861127009863BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42441A7E158616AF009863BE /* self-assembly.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		424419FC15861127009863BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42441A7E158616AF009863BE /* self-assembly.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		42441A9315861725009863BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../DerivedData/research/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42441A9415861725009863BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../DerivedData/research/Build/Products/Debug\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		424419ED15861127009863BE /* Build configuration list for PBXProject "self-assembly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424419FB15861127009863BE /* Debug */,
+				424419FC15861127009863BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42441A9215861725009863BE /* Build configuration list for PBXNativeTarget "self-assembly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42441A9315861725009863BE /* Debug */,
+				42441A9415861725009863BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 424419EA15861127009863BE /* Project object */;
+}

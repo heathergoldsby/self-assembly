@@ -1,0 +1,13 @@
+import os ;
+local HOME = [ os.environ HOME ] ;
+
+use-project /libea : ../ealib/libea ;
+
+exe self-assembly :
+    src/main.cpp
+    /libea//libea
+    /libea//libea_runner
+    : <include>./include <link>static
+    ;
+
+install dist : self-assembly : <location>$(HOME)/bin ;
