@@ -136,6 +136,48 @@ struct french_flag : periodic_event<METAPOP_COMPETITION_PERIOD,EA> {
 };
 
 
+template <typename EA>
+struct french_flag_movie : public ea::analysis::unary_function<EA> {
+    static const char* name() { return "french_flag_movie"; }
+    
+    virtual void operator()(EA& ea) {
+        using namespace ea;
+        using namespace ea::analysis;
+        using namespace boost::accumulators;
+
+        typename EA::population_type::iterator dominant=ea.population().begin();
+        for(typename EA::population_type::iterator i=ea.population().begin(); i!=ea.population().end(); ++i) {
+            if(get<FF_FITNESS>(**i) > get<FF_FITNESS>(**dominant)) {
+                dominant = i;
+            }
+        }
+
+        // build a new ea that we transfer the individuals into (because serialization is broken, grr...
+        typename EA::individual_ptr_type p(new typename EA::individual_type());
+            
+        // setup the population (really, an ea):
+        p->md() = ea.md();
+        p->rng().reset(ea.rng()(std::numeric_limits<int>::max()));
+        p->initialize();
+            
+        // grab a copy of the first individual:        
+        typename EA::individual_type::individual_type germ(**((*dominant)->population().begin()));
+            
+        // fill up the population with copies of the germ:
+        for(std::size_t j=0; j<get<POPULATION_SIZE>(ea); ++j) {
+            typename EA::individual_type::individual_ptr_type o=make_population_entry(germ,*p);
+            p->population().push_back(o);
+            p->env().insert(o);
+        }
+            
+        // run the ea for a bit...
+        for(unsigned int i=0; i<get<METAPOP_COMPETITION_PERIOD>(ea); ++i) {
+            p->update();
+        }
+    }
+};
+
+
 /*! Artificial life simulation definition.
  */
 typedef artificial_life<
@@ -175,9 +217,15 @@ public:
         add_option<CHECKPOINT_PREFIX>(this);        
         add_option<RNG_SEED>(this);
         add_option<RECORDING_PERIOD>(this);
+        
+        // analysis options
+        add_option<ANALYSIS_INPUT>(this);
+        add_option<ANALYSIS_OUTPUT>(this);
+        add_option<ANALYSIS_ROUNDS>(this);
     }
     
     virtual void gather_tools() {
+        add_tool<french_flag_movie>(this);
     }
     
     virtual void gather_events(EA& ea) {
